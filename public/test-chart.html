@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart.js Test</title>
+    <script src="assets_admin/vendor/chart.js/Chart.min.js"></script>
+</head>
+<body>
+    <h1>Chart.js Test</h1>
+    <div style="width: 400px; height: 300px;">
+        <canvas id="testChart"></canvas>
+    </div>
+    
+    <script>
+        console.log('Chart.js loaded:', typeof Chart !== 'undefined');
+        console.log('Chart.js version:', Chart.version);
+        
+        var ctx = document.getElementById('testChart');
+        var testChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Test 1', 'Test 2', 'Test 3'],
+                datasets: [{
+                    label: 'Test Data',
+                    data: [12, 19, 3],
+                    backgroundColor: 'rgba(78, 115, 223, 0.8)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Custom CSS untuk memperlebar sidebar khusus admin */
+@media (min-width: 768px) {
+    /* Hanya untuk route admin.* (bukan verifikator.*, keuangan.*, kepsek.*) */
+    body[data-route^="admin."] .sidebar {
+        width: 18rem !important;
+    }
+    
+    body[data-route^="admin."] .sidebar .nav-item .nav-link {
+        width: 18rem;
+    }
+    
+    body[data-route^="admin."] .sidebar.toggled {
+        width: 6.5rem !important;
+    }
+}

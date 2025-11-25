@@ -1,0 +1,341 @@
+/* Modern Dashboard - PPDB SMK BN */
+
+body { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+
+/* Sidebar */
+.sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    width: 14rem;
+}
+
+.sidebar .sidebar-brand {
+    background: #f8fafc;
+    color: #1e40af;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar .sidebar-brand-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.sidebar .sidebar-heading {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.25rem 1rem 0.75rem;
+}
+
+.sidebar .nav-item .nav-link {
+    color: #64748b;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s;
+    border-radius: 0.5rem;
+    margin: 0.2rem 0.5rem;
+}
+
+.sidebar .nav-item .nav-link i {
+    color: #64748b;
+}
+
+.sidebar .nav-item .nav-link:hover {
+    color: #1e40af;
+    background: #f0f9ff;
+}
+
+.sidebar .nav-item .nav-link:hover i {
+    color: #1e40af;
+}
+
+.sidebar .nav-item.active .nav-link {
+    color: #1e293b;
+    background: transparent;
+    font-weight: 700;
+    border-left: 3px solid #60a5fa;
+    padding-left: calc(1rem - 3px);
+}
+
+.sidebar .nav-item.active .nav-link i {
+    color: #1e293b;
+}
+
+.sidebar .collapse-inner {
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    margin: 0.2rem 0.5rem;
+    padding: 0.3rem 0;
+}
+
+.sidebar .collapse-item {
+    padding: 0.5rem 1rem;
+    margin: 0.1rem 0.3rem;
+    border-radius: 0.35rem;
+    color: #64748b;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.sidebar .collapse-item:hover {
+    color: #1e40af;
+    background: #f0f9ff;
+}
+
+.sidebar .collapse-item.active {
+    color: #1e293b;
+    background: transparent;
+    font-weight: 700;
+    border-left: 3px solid #60a5fa;
+    padding-left: calc(1rem - 3px);
+}
+
+.sidebar .collapse-header {
+    color: #94a3b8;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #e0e7ff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(91,141,239,0.08);
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(91,141,239,0.12);
+}
+
+.card-header {
+    background: #f8fafc;
+    color: #1e293b;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+/* Stats Cards */
+.border-left-primary {
+    border-left: 0.3rem solid #5b8def !important;
+    border-top: 1px solid #e0e7ff !important;
+    background: linear-gradient(135deg, #fff 0%, #eff6ff 100%);
+}
+
+.border-left-success {
+    border-left: 0.3rem solid #4ade80 !important;
+    border-top: 1px solid #d1fae5 !important;
+    background: linear-gradient(135deg, #fff 0%, #f0fdf4 100%);
+}
+
+.border-left-info {
+    border-left: 0.3rem solid #60a5fa !important;
+    border-top: 1px solid #e0e7ff !important;
+    background: linear-gradient(135deg, #fff 0%, #eff6ff 100%);
+}
+
+.border-left-warning {
+    border-left: 0.3rem solid #fbbf24 !important;
+    border-top: 1px solid #fef3c7 !important;
+    background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);
+}
+
+.border-left-danger {
+    border-left: 0.3rem solid #fb7185 !important;
+    border-top: 1px solid #ffe4e6 !important;
+    background: linear-gradient(135deg, #fff 0%, #fff1f2 100%);
+}
+
+.border-left-secondary {
+    border-left: 0.3rem solid #38bdf8 !important;
+    border-top: 1px solid #e0f2fe !important;
+    background: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
+}
+
+.border-left-dark {
+    border-left: 0.3rem solid #64748b !important;
+    border-top: 1px solid #e2e8f0 !important;
+    background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+}
+
+/* Keuangan Card - Hijau */
+.keuangan-card {
+    border-left: 0.3rem solid #1cc88a !important;
+    border-top: 1px solid #d1fae5 !important;
+    background: linear-gradient(135deg, #fff 0%, #f0fdf4 100%) !important;
+}
+
+.keuangan-card .card-body {
+    background: transparent;
+}
+
+.keuangan-card i {
+    color: #1cc88a !important;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-primary:hover {
+    background: #bfdbfe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30,64,175,0.2);
+}
+
+.btn-success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.btn-success:hover {
+    background: #a7f3d0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6,95,70,0.2);
+}
+
+.btn-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.btn-warning:hover {
+    background: #fde68a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(146,64,14,0.2);
+}
+
+.btn-info {
+    background: #cffafe;
+    color: #155e75;
+}
+
+.btn-info:hover {
+    background: #a5f3fc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(21,94,117,0.2);
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239,68,68,0.3);
+}
+
+/* Table */
+.table thead th {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #e0e7ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 1rem;
+}
+
+.table tbody tr {
+    transition: all 0.2s;
+    border-bottom: 1px solid #e0e7ff;
+}
+
+.table tbody td {
+    border: 1px solid #e0e7ff;
+}
+
+.table tbody tr:hover {
+    background: linear-gradient(135deg, rgba(91,141,239,0.04), rgba(56,189,248,0.04));
+}
+
+.table { background: #fff; border: 1px solid #e0e7ff; }
+
+/* Badge */
+.badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.badge-success { background: #4ade80; color: #fff; }
+.badge-warning { background: #fbbf24; color: #fff; }
+.badge-info { background: #06b6d4; color: #fff; }
+.badge-primary { background: linear-gradient(135deg, #5b8def, #4a7de8); color: #fff; }
+.badge-danger { background: linear-gradient(135deg, #fb7185, #f43f5e); color: #fff; }
+.badge-secondary { background: linear-gradient(135deg, #38bdf8, #0ea5e9); color: #fff; }
+
+/* Navbar */
+.topbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #e0e7ff;
+}
+
+/* Alert */
+.alert {
+    border: none;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-left-color: #4ade80;
+    color: #166534;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+    border-left-color: #fb7185;
+    color: #9f1239;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border-left-color: #60a5fa;
+    color: #1e40af;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.5s ease; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #5b8def, #38bdf8);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar { width: 6.5rem; }
+    .sidebar .sidebar-brand-text, .sidebar .nav-item .nav-link span { display: none; }
+}

@@ -1,0 +1,52 @@
+/* Dropdown Menu Fixes */
+.navmenu .dropdown ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 2px 0;
+  margin: 1px 0 0 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3px);
+  transition: all 0.15s ease;
+}
+
+.navmenu .dropdown:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navmenu .dropdown ul li a {
+  display: block;
+  padding: 6px 12px;
+  color: #333 !important;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.navmenu .dropdown ul li a:hover {
+  background: #007bff !important;
+  color: white !important;
+}
+
+.navmenu .dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navmenu .dropdown > a .toggle-dropdown {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.navmenu .dropdown:hover > a .toggle-dropdown {
+  transform: rotate(180deg);
+}

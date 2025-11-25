@@ -1,0 +1,62 @@
+@extends('admin.layouts.main')
+
+@section('title', 'Daftar Pembayaran')
+
+@section('content')
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Daftar Pembayaran</h1>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Semua Pembayaran</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>No. Pendaftaran</th>
+                        <th>Nama</th>
+                        <th>Nominal</th>
+                        <th>Tanggal Bayar</th>
+                        <th>Status</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse($pembayaran as $index => $item)
+                    <tr>
+                        <td>{{ $pembayaran->firstItem() + $index }}</td>
+                        <td>{{ $item->pendaftar->no_pendaftaran }}</td>
+                        <td>{{ $item->pendaftar->pengguna->nama }}</td>
+                        <td>Rp {{ number_format($item->nominal, 0, ',', '.') }}</td>
+                        <td>{{ $item->tanggal_bayar->format('d/m/Y') }}</td>
+                        <td>
+                            @switch($item->status)
+                                @case('PENDING')
+                                    <span class="badge badge-warning">Menunggu</span>
+                                    @break
+                                @case('VERIFIED')
+                                    <span class="badge badge-success">Terverifikasi</span>
+                                    @break
+                                @case('REJECTED')
+                                    <span class="badge badge-danger">Ditolak</span>
+                                    @break
+                            @endswitch
+                        </td>
+                        <td>{{ $item->keterangan ?? '-' }}</td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="7" class="text-center">Belum ada data pembayaran</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+        {{ $pembayaran->links() }}
+    </div>
+</div>
+@endsection
